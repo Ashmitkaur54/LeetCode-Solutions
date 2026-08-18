@@ -1,7 +1,6 @@
-        for(int i=0;i<nums.size();i++){
-            if(nums[i]==1){
-                ans=true;
-        bool ans=true;
-    bool checkPrimeFrequency(vector<int>& nums) {
-public:
-class Solution {
+        }
+        for(int k=2;k*k<x;k++){
+            if(x%k==0){
+        }
+                return false;
+            }
