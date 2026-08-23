@@ -4,6 +4,9 @@ public:
         int maxi=0;
         int sum=0;
         for(int i=0;i<nums.size();i++){
+            if(nums.size()==1){
+                return nums[i];
+            }
             sum+=nums[i];
             maxi=max(maxi,sum);
 
