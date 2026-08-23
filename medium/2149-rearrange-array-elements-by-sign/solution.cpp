@@ -1,12 +1,19 @@
 class Solution {
 public:
-    int maxSubArray(vector<int>& nums) {
-        int maxi=nums[0];
-        int sum=nums[0];
-        for(int i=1;i<nums.size();i++){
-            sum=max(nums[i],sum+nums[i]);
-            maxi=max(maxi,sum);
+    vector<int> rearrangeArray(vector<int>& nums) {
+        vector<int>v(nums.size());
+        int j=1;
+        int k=0;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]<0){
+                v[j]=nums[i];
+                j+=2;
+            }
+            else{
+                v[k]=nums[i];
+                k+=2;
+            }
         }
-        return maxi;
+        return v;
     }
 };
