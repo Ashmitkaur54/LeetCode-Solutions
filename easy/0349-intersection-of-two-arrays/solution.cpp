@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
         unordered_map<int, int> mp;
-        set<int> st;
+        vector<int> v;
 
         for (int i = 0; i < nums1.size(); i++) {
             mp[nums1[i]] = 1;
@@ -16,11 +16,9 @@ public:
 
         for (auto k : mp) {
             if (k.second == 2) {
-                st.insert(k.first);
+                v.push_back(k.first);
             }
         }
-
-        vector<int> ans(st.begin(), st.end());
-        return ans;
+        return v;
     }
 };
