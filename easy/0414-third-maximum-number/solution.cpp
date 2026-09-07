@@ -1,7 +1,16 @@
-class Solution {
+class Solution {
 public:
-    int thirdMax(vector<int>& nums) {
-        set<int>st;
-        for(int i=0;i<nums.size();i++){
-            st.insert(nums[i]);
-        }
+    int thirdMax(vector<int>& nums) {
+        set<int>st;
+        for(int i=0;i<nums.size();i++){
+            st.insert(nums[i]);
+        }
+        if(st.size()<3){
+            return *st.rbegin();
+        }
+        auto it=st.rbegin();
+        it++;
+        it++;
+        return *it;
+    }
+};
