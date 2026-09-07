@@ -4,31 +4,33 @@ public:
         int n1=0;
         int rev=0;
         int original=n;
-        n1=n%10;
-        rev=rev*10+n1;
-        n/=10;
-        if(original==rev){
-            return true;
+        while (n > 0) {
+            int digit = n % 10;
+            rev = rev * 10 + digit;
+            n /= 10;
         }
-        else{
-            return false;
-        }
+
+        return original == rev;
     }
     bool prime(int n){
-        for(int i=0;i*i<n;i++){
+        bool a=true;
+        if(n<2){
+            return false;
+        }
+        for(int i=2;i*i<=n;i++){
             if(n%i==0){
-                return true;
-            }
-            else{
-                return false;
+                a=false;
+                break;
             }
         }
+        return a;
     }
     int primePalindrome(int n) {
-        int ans=0
+        int ans=0;
         while(true){
             if(prime(n) && palindrome(n)){
                 ans = n;
+                break;
             }
             n++;
         }
