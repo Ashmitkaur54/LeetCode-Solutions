@@ -6,9 +6,9 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Solved | 107 |
-| Easy | 64 |
-| Medium | 43 |
+| Total Solved | 109 |
+| Easy | 65 |
+| Medium | 44 |
 | Hard | 0 |
 | Current Streak | 25 days |
 | Last Synced | 9/9/2026 |
@@ -17,7 +17,7 @@
 
 | Language | Solutions |
 |----------|-----------|
-| C++ | 107 |
+| C++ | 109 |
 
 ---
-*Last updated: 2026-09-09T06:39:01.649Z*
+*Last updated: 2026-09-09T16:45:50.013Z*
