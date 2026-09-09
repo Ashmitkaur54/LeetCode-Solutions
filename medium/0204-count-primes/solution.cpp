@@ -1,9 +1,8 @@
-        for(int j=2;j*j<a;j++){
-        if(ans<2){
-            ans=false;
+        for(int j=2;j*j<=a;j++){
         }
-            if(a%j==0){
-                ans=false;
-            }
+            ans=false;
+        if(a<2){
         bool ans=true;
     bool isprime(int a){
+public:
+class Solution {
