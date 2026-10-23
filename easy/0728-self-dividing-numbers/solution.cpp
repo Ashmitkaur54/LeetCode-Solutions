@@ -1,25 +1,26 @@
+
 class Solution {
 public:
     vector<int> selfDividingNumbers(int left, int right) {
         vector<int> ans;
 
-        for(int num = left; num <= right; num++) {
-            int n = num;
-            bool flag = true;
+        for (int i = left; i <= right; i++) {
+            int n = i;
+            bool valid = true;
 
-            while(n > 0) {
+            while (n > 0) {
                 int digit = n % 10;
 
-                if(digit == 0 || num % digit != 0) {
-                    flag = false;
+                if (digit == 0 || i % digit != 0) {
+                    valid = false;
                     break;
                 }
 
-                n = n / 10;
+                n /= 10;
             }
 
-            if(flag) {
-                ans.push_back(num);
+            if (valid) {
+                ans.push_back(i);
             }
         }
 
